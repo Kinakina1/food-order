@@ -1,0 +1,28 @@
+{% extends "menu/base.html" %}   
+    {% block title %}
+        غذاها
+    {% endblock title %}
+
+    {% block main %}
+    
+    <div class="row">
+    {% for food in foods %}
+    <div class="col-md-4 mb-4">
+
+        <div class="card h-100">
+            <img src="{{ food.image.url }}" class="card-img-top food-image">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ food.name }}</h5>
+                <p class="card-text">{{ food.description }}</p>
+
+                <a href="#" class="btn btn-primary">
+                    اضافه کردن به سبد خرید
+                </a>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+    {% endblock main %}
