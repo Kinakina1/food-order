@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 class CustomUser (AbstractUser):
     phone_number = models.CharField(max_length=11,verbose_name='شماره تماس')
     address = models.CharField(max_length=256,verbose_name='آدرس')
-    points = models.IntegerField(default=0,verbose_name='امتیاز')
+    points = models.IntegerField(default=5000000,verbose_name="اعتبار")
 
     class Meta:
         verbose_name = "کاربر"

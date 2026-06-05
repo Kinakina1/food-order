@@ -18,10 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from menu.views import food_list
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('menu/', include("menu.urls"))
+    path('menu/', include("menu.urls")),
+    path('cart/', include("orders.urls")),
+    path('', food_list, name='home'),
+    path('accounts/', include("accounts.urls")),
 ]
 
 urlpatterns += static(

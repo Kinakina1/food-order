@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'menu.apps.MenuConfig',
-    'orders.apps.OrdersConfig'
+    'orders.apps.OrdersConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+USE_THOUSAND_SEPARATOR = True
+
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'Asia/Tehran'
 

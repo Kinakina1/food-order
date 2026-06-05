@@ -1,0 +1,16 @@
+{% extends 'menu/base.html' %}
+
+    {% block title %}
+        ثبت نام
+    {% endblock %}
+
+
+    {% block main %}
+
+    <form action="{% url 'register' %}"  method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="ثبت نام">
+    </form>
+
+        {% endblock %}

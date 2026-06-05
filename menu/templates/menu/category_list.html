@@ -1,0 +1,27 @@
+{% extends "menu/base.html" %}
+
+{% block title %}
+   دسته بندی ها
+{% endblock title %}
+
+{% block main %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">دسته بندی ها</h2>
+
+    <div class="row">
+        {% for category in categories %}
+            <div class="col-md-4 mb-3">
+                <a href="{% url 'category_detail' category.slug %}" class="text-decoration-none">
+                    <div class="card shadow-sm p-3">
+                        <h5>{{ category.name }}</h5>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock main %}
